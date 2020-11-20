@@ -1,0 +1,228 @@
+
+/* comments no CSS */
+
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-size: 17px;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("../IMG/lofi-screem.gif");
+  
+    /* Set a specific height */
+    height: 300px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    background-color:#305169;
+    height: 100px;
+}
+
+header h1 {
+    font-size: 40px;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: auto;
+    padding: 30px 0px;
+    color: #ffffff;
+    transition: all 0.5s;
+}
+
+header h1:hover {
+    /* font-size: 50px; */
+    background-color: #482348;
+    color: #305169;
+    text-shadow: 5px 5px rgba(17, 17, 37, 0.699);
+
+}
+
+/*                Animation test                  */
+
+@keyframes bullet {
+    0% {
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        top: 230px;left: 0%;
+    }
+    
+    50% {
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        top: 230px;left: 90%;
+    }
+    
+    100% {
+        border-top-right-radius: 50px;
+        border-bottom-right-radius: 50px;
+        top: 230px;left: 0%;
+    }
+}
+
+.animation {
+    width: 10%;
+    position: absolute;
+    background-color: #305169;
+    animation-name: bullet;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+/*                Animation test                */
+
+
+
+.animation p {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: #fff;
+}
+
+#teste {
+    height: 100px;
+    width: 100%;
+    color: #fff;
+    background:#305169;
+    background: linear-gradient(#305169, #482348);
+}
+
+#teste h1 {
+    font-family: verdana;
+    text-align: center;
+    margin: 0;
+    padding: 30px;
+}
+
+.cadastro, .login {
+    background-color: #305169;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 0 30px 30px;
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 10px 15px rgba(17, 17, 37, 0.699);
+}
+
+input, select {
+    padding: 10px;
+    margin: 7px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#senha, #ckb {
+    width: auto;
+    text-align: left;
+}
+
+.cadastro label {
+    text-align: left;
+    font-size: 12px;
+}
+
+.login label {
+    text-align: left;
+    font-size: 12px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container input[type=text], [type=password], [type=email] {
+    width: 80%;
+    margin: 10px;
+}
+
+
+/* --------------- PAGINAS ----------------  */
+
+
+
+.dale {
+    float: left;
+    width: 40%;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 1% 5%;
+    border: 1px solid;
+    border-top: 0px;
+    border-bottom: 0px;
+}
+
+.dale h2 {
+    color: #fff;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(30, 51, 69, 0.8);
+    padding: 10px;
+    margin: 0;
+}
+
+.dale p {
+    color: #ccc;
+    padding: 10px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    word-wrap: break-word; /* quebra de palavras muito longas */
+}
+
+
+/* ---------------- MOBILE ------------------- */
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .cadastro .login {
+        width: 100%;
+        margin: 0%;
+    }
+
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 500px) {
+    .dale {
+        margin: 1% 5%;
+    }
+
+/*
+    .cadastro {
+        border-radius: 0px;
+        padding: 5% 0;
+        width: 100%;
+        margin: 0;
+        height: auto;
+    }
+    .login {
+        border-radius: 0px;
+        padding: 5% 0;
+        width: 100%;
+        margin: 0;
+        height: auto;
+    }
+*/
+}
+@media only screen and (max-width: 500px) {
+    .dale {
+        width: 100%;
+        margin: 0;
+    }
+}
